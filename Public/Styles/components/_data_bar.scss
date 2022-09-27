@@ -1,0 +1,62 @@
+[data-bar]{
+
+  $colors: ("armor": #1164b5,
+          "mana": #459cba,
+          "damage boost": #be4a28,
+          "attack speed": #9b354a,
+          "defense" : #172796,
+          "rune charge": #E3AC1B,
+          "life steal": #cf1b28
+  );
+
+
+  height: 25px;
+  margin-bottom: 10px;
+  position: relative;
+
+  @each $type, $color in $colors{
+
+    &[data-bar="#{$type}"]{
+      border: 1px solid #{$color};
+
+      >div.value{
+        background: #{$color};
+      }
+
+    }
+
+  }
+
+  >div.value{
+
+    -webkit-transition: width .4s ease-in-out;
+    -moz-transition: width .4s ease-in-out;
+    -ms-transition: width .4s ease-in-out;
+    -o-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+
+    height: 100%;
+    width: 100%;
+
+    span{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 45%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      text-align: left;
+      display: block;
+      color: #FFF !important;
+      font-weight: 600;
+      padding-left: 0.4em;
+
+
+    }
+
+  }
+
+}

@@ -1,0 +1,75 @@
+// BG COLORS
+$primary_color: #FFF;
+$secondary_color: #61b75e;
+
+// BTN COLORS
+$btn_bg_color: #0081c3;
+$btn_font_color: #000;
+$btn_white_font_color: #000;
+
+// FONT COLORS
+$primary_font_color: #000;
+$warning_color: #ffc219;
+
+//FONT SETTINGS
+$font_name: "Roboto";
+@font-face {
+  font-family: $font_name;
+  font-display: auto;
+  src: local("Roboto"), local("Roboto-Regular"), url("/Public/Fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Maintenance Block */
+.error_page{
+
+  background: #ffffff !important;
+
+  body{
+
+    background: #ffffff !important;
+
+    .maintenance{
+
+      position: relative;
+      width: 40%;
+      top: 200px;
+      margin-left: auto;
+      margin-right: auto;
+
+
+
+      border: 2px solid #ff2238;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+
+      *{
+        color: #000 !important;
+      }
+
+      h1{
+        background: #ff2238;
+        color: #FFF !important;
+        text-align: center;
+        font-size: 24px;
+        padding: .3em 0 .4em 0;
+      }
+
+      p{
+
+        font-size: 18px;
+        text-align: center;
+        padding: .6em .6em;
+
+      }
+
+    }
+  }
+
+
+}
+
+

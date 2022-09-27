@@ -1,0 +1,96 @@
+/* --- UTILITIES --- */
+
+$i:0;
+
+@while($i < 100){
+
+  .mb_#{$i}{
+    margin-bottom: $i+px;
+  }
+
+  $i: $i +5;
+
+}
+
+
+
+
+// Position
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.sticky{
+  position: sticky;
+  top: 0;
+}
+
+.no_margin{
+  margin: 0 !important;
+}
+
+
+// Heights
+.h0{
+
+  height: 0;
+
+}
+
+.ovh{
+
+  overflow: hidden;
+
+}
+
+.ovh-x{
+  overflow-x: hidden;
+}
+
+.ovh-y{
+  overflow-y: hidden;
+}
+
+// Colors
+
+.bg_main{
+  background-color: $primary_color;
+}
+
+.bg_second{
+  background-color: $secondary_color;
+}
+
+// hidden message
+.hidden_message{
+
+  margin-top: 10px;
+  opacity: 0;
+  height: 0;
+
+  -webkit-transition: opacity .2s ease, height 0s ease .2s;
+  -moz-transition: opacity .2s ease, height 0s ease .2s;
+  -ms-transition: opacity .2s ease, height 0s ease .2s;
+  -o-transition: opacity .2s ease, height 0s ease .2s;
+  transition: opacity .2s ease, height 0s ease .2s;
+
+
+  &.active{
+    height: auto;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease, height 0s ease;
+    -moz-transition: opacity .2s ease, height 0s ease;
+    -ms-transition: opacity .2s ease, height 0s ease;
+    -o-transition: opacity .2s ease, height 0s ease;
+    transition: opacity .2s ease, height 0s ease;
+  }
+
+}

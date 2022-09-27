@@ -1,0 +1,142 @@
+.navbar{
+
+  text-align: center;
+  margin: auto;
+  background: darken($primary_color, 10%);
+  z-index: 16;
+  width: 100%;
+  -webkit-box-shadow:  0 6px 10px rgba(50, 50, 50, .8);
+  -moz-box-shadow:  0 6px 10px rgba(50, 50, 50, .8);
+  box-shadow:  0 6px 10px rgba(50, 50, 50, .8);
+
+  .navbar_content{
+
+    padding: 1em 0;
+    margin: auto;
+    position: relative;
+
+    .navbar_left{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .navbar_right{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+  }
+
+
+}
+
+
+/* Aside nav */
+
+.aside_nav{
+
+  position: fixed;
+  top: 58px;
+  height: calc(100% - 58px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: darken($primary_color, 10%);
+  z-index: 16;
+  border-top: 5px solid lighten($primary_color, 5%);
+  box-shadow: 0 0 0 transparent, 0 25px 25px rgba(50, 50, 50, .8), 0 0 0 transparent, 0px -10px 0px darken($primary_color, 10%);
+  width: 70px;
+  -webkit-transition: width .4s ease;
+  -moz-transition: width .4s ease;
+  -ms-transition: width .4s ease;
+  -o-transition: width .4s ease;
+  transition: width .4s ease;
+  padding-left: 1em;
+  padding-top: 1em;
+
+  &.active{
+
+    width: 10% !important;
+
+    ul{
+
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      li{
+
+        width: 100%;
+
+        a{
+          padding-left: 2em;
+        }
+
+      }
+
+    }
+
+  }
+
+  ul{
+
+    position: absolute;
+    left: -150%;
+    -webkit-transition: left .4s ease;
+    -moz-transition: left .4s ease;
+    -ms-transition: left .4s ease;
+    -o-transition: left .4s ease;
+    transition: left .4s ease;
+    width: 0;
+
+    li{
+
+      padding-left: 0;
+      -webkit-transition: padding-left .4s ease;
+      -moz-transition: padding-left .4s ease;
+      -ms-transition: padding-left .4s ease;
+      -o-transition: padding-left .4s ease;
+      transition: padding-left .4s ease;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0 !important;
+
+      a{
+
+        padding: 1em 0;
+        display: block;
+        width: 100%;
+        -webkit-transition: padding .4s ease;
+        -moz-transition: padding .4s ease;
+        -ms-transition: padding .4s ease;
+        -o-transition: padding .4s ease;
+        transition: padding .4s ease;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+      }
+
+      &:hover{
+
+        background: darken($primary_color, 5%);
+
+      }
+
+
+    }
+
+  }
+
+}
+
+.fix_header{
+  height: 58px;
+}

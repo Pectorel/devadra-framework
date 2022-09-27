@@ -1,0 +1,40 @@
+.notif{
+
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+
+  width: 250px;
+  min-height: 75px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  z-index: 12;
+
+
+  &.success{
+    background: #D69A39;
+  }
+
+  &.error{
+    background: #ff1a35;
+  }
+
+  .close_notif{
+
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    height: 30px;
+    width: 30px;
+    background: url("/Public/Images/site/close.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+
+
+  }
+
+}

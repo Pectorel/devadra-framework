@@ -1,0 +1,68 @@
+/* --- FILTER ---*/
+.admin_filter{
+
+  margin-top: 40px;
+
+  header{
+
+    background: darken($primary_color, 10%);
+    padding: 1em 2em;
+    position: relative;
+
+    .icon{
+
+      position: absolute;
+      right: 2em;
+      height: 100%;
+      top: 0;
+
+      &:before{
+
+
+        -moz-transition: transform .4s ease;
+        -ms-transition: transform .4s ease;
+        -o-transition: transform .4s ease;
+        transition: transform .4s ease;
+      }
+
+
+      &.active{
+
+        &:before{
+
+          -webkit-transform: translateY(-50%) rotateZ(180deg);
+          -moz-transform: translateY(-50%) rotateZ(180deg);
+          -ms-transform: translateY(-50%) rotateZ(180deg);
+          -o-transform: translateY(-50%) rotateZ(180deg);
+          transform: translateY(-50%) rotateZ(180deg);
+
+        }
+
+      }
+
+
+
+    }
+
+  }
+
+  #AdminFilterForm{
+
+    height: 0;
+    overflow: hidden;
+    background: darken($primary_color, 5%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    form{
+
+      width: 50%;
+      margin: auto;
+      padding: 2em 0;
+
+    }
+
+  }
+
+}

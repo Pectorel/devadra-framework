@@ -1,0 +1,68 @@
+// Social Media
+.social_media{
+
+  position: relative;
+  -webkit-transition: opacity .2s ease;
+  -moz-transition: opacity .2s ease;
+  -ms-transition: opacity .2s ease;
+  -o-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+
+  &:after{
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    -webkit-background-size: contain !important;
+    background-size: contain !important;
+    margin-top: 3px;
+
+  }
+
+
+  &:not(:last-child){
+    margin-right: 10px;
+  }
+
+  &.discord{
+    &:after{
+      background: url("/Public/Images/site/discord.png") no-repeat center center;
+    }
+
+  }
+
+  &.facebook{
+    &:after{
+      background: url("/Public/Images/site/facebook.png") no-repeat center center;
+    }
+
+  }
+
+  &.twitch{
+    &:after{
+      background: url("/Public/Images/site/twitch.png") no-repeat center center;
+    }
+
+  }
+
+  &.twitter{
+    &:after{
+      background: url("/Public/Images/site/twitter.png") no-repeat center center;
+    }
+
+  }
+
+  &:hover{
+    opacity: .8;
+  }
+
+}

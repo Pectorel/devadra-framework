@@ -1,0 +1,27 @@
+/* Responsive */
+
+//Breakpoints
+$breakpoints: (
+  desktop: 87.5rem,
+  tablet: 45.5rem,
+  mobile: 30rem
+);
+
+// Mixins
+@mixin desktop{
+  @media(min-width: map_get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media(min-width: map_get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile{
+  @media(min-width: map_get($breakpoints, mobile)) {
+    @content;
+  }
+}

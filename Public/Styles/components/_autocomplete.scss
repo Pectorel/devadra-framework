@@ -1,0 +1,23 @@
+.autocomplete_block{
+
+  position: absolute;
+  border: 2px solid rgba(#111, .1);
+  background: #FFF;
+  width: 150px;
+
+  .autocomplete_line{
+
+    display: block;
+    color: #000 !important;
+    font-size: 14px;
+    padding: .5em;
+    cursor: pointer;
+
+    &:hover{
+      background: darken(#FFF, 10%);
+    }
+
+  }
+
+
+}

@@ -1,0 +1,33 @@
+{
+  "name": "DevadraFramework",
+  "version": "1.4.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No tests' ",
+    "installUtilities": "npm install uglify-es -g && npm install uglifycss -g && echo 'Ne pas oublier de mettre a jour votre PATH!' ",
+    "babelCompile": "./node_modules/.bin/babel ./Public/Scripts/_src --out-dir ./Public/Scripts --source-maps --presets=@babel/env",
+    "uglifyJSPublic": "uglifyjs node_modules/jquery/dist/jquery.js node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js Public/Scripts/components/getCaretPosition.js Public/Scripts/components/utilities.js Public/Scripts/components/TextareaAutoComplete.js Public/Scripts/components/Multipage.js Public/Scripts/components/Equalizer.js Public/Scripts/components/jquery_extends.js Public/Scripts/script.js Public/Scripts/script.js Public/Scripts/components/Popup.js Public/Scripts/components/Tabs.js Public/Scripts/components/AjaxCall.js node_modules/trumbowyg/dist/trumbowyg.js node_modules/trumbowyg/dist/langs/fr.min.js -o Public/Scripts/dist/public.min.js -c -m && npm run versioning js public",
+    "uglifyJSAdmin": "uglifyjs node_modules/jquery/dist/jquery.js  node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js Public/Scripts/components/jquery_extends.js  Public/Scripts/components/utilities.js Public/Scripts/script.js Public/Scripts/components/Popup.js Public/Scripts/components/Multipage.js Public/Scripts/components/Tabs.js Public/Scripts/components/admin/formValidator.js Public/Scripts/components/admin/script.js Public/Scripts/components/admin/utilities.js Public/Scripts/components/AjaxCall.js node_modules/trumbowyg/dist/trumbowyg.js node_modules/trumbowyg/dist/langs/fr.min.js -o Public/Scripts/dist/admin.min.js -c -m && npm run versioning js admin",
+    "uglifyJS": "npm run uglifyJSPublic && npm run uglifyJSAdmin",
+    "buildJS": "npm run babelCompile && npm run uglifyJS",
+    "uglifyCssPublic": "uglifycss node_modules/trumbowyg/dist/ui/trumbowyg.css node_modules/jquery-datetimepicker/jquery.datetimepicker.css Public/Styles/style.css > Public/Styles/dist/public.min.css && npm run versioning css public",
+    "uglifyCssAdmin": "uglifycss node_modules/trumbowyg/dist/ui/trumbowyg.css node_modules/jquery-datetimepicker/jquery.datetimepicker.css Public/Styles/admin.css > Public/Styles/dist/admin.min.css && npm run versioning css admin",
+    "uglifyCss": "npm run uglifyCssPublic && npm run uglifyCssAdmin",
+    "uglifyAll": "npm run uglifyJS && npm run uglifyCss",
+    "build&UglifyAll": "npm run buildJS && npm run uglifyCss",
+    "versioning": "node versioning.js"
+  },
+  "author": "Aurélien KONIECZNY",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-datetimepicker": "^2.5.21",
+    "trumbowyg": "^2.18.0"
+  }
+}

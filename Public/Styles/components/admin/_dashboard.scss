@@ -1,0 +1,89 @@
+/* --- Dashboard --- */
+
+#DashboardContainer{
+
+  margin-top: 40px;
+
+  .dashboard_section{
+
+    padding: 2em;
+    border: 2px solid darken($primary_color, 5%);
+    position: relative;
+    height: 360px;
+    width: 95%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    @extend .bloc_center;
+
+
+    .dashboard_card{
+
+      border: 4px dashed darken($primary_color, 10%);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 150px;
+      width: 15%;
+      display: inline-block;
+      position: relative;
+      margin-right: 5%;
+
+      -webkit-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      -ms-transition: all .4s ease;
+      -o-transition: all .4s ease;
+      transition: all .4s ease;
+
+      &:hover {
+
+        background-color: darken($primary_color, 5%);
+        border-color: #FFF;
+
+      }
+
+      &:nth-child(5n)
+      {
+        margin-right: 0;
+      }
+
+      span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        text-align: center;
+      }
+
+    }
+
+    .dashboard_title{
+
+      position: absolute;
+      top: -15px;
+      background: $primary_color;
+      padding: 0 10px;
+
+
+    }
+
+    .dashboard_content{
+
+      height: 100%;
+      overflow: auto;
+
+      .dashboard_section_text{
+
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 34px;
+
+      }
+
+    }
+
+
+
+  }
+
+}

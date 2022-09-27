@@ -1,0 +1,184 @@
+@mixin button($bgcolor, $color){
+
+  background: $bgcolor !important;
+  color: $color !important;
+  padding: .6em 1.2em;
+  font-size: 20px;
+  -webkit-transition: background .4s ease, color .4s ease;
+  -moz-transition: background .4s ease, color .4s ease;
+  -ms-transition: background .4s ease, color .4s ease;
+  -o-transition: background .4s ease, color .4s ease;
+  transition: background .4s ease, color .4s ease;
+  border: none;
+  cursor: pointer;
+
+  &:not(.disabled):hover{
+
+    background: darken($color, 10%) !important;
+    color: $bgcolor !important;
+
+  }
+
+}
+
+
+
+.btn{
+
+  @include button($btn_bg_color, $btn_font_color);
+
+}
+
+.btn_white{
+  @include button(#FFF, $btn_white_font_color);
+}
+
+.btn_blue{
+
+  @include button(#3ab1fa, #FFF);
+
+}
+
+@mixin rounded_button($bgcolor, $color)
+{
+
+  background: transparent;
+  padding: .6em 1.2em;
+  border: 2px solid $bgcolor;
+  color: $color;
+  display: inline-block;
+
+  -webkit-transition: background .2s ease, color .2s ease;
+  -moz-transition: background .2s ease, color .2s ease;
+  -ms-transition: background .2s ease, color .2s ease;
+  -o-transition: background .2s ease, color .2s ease;
+  transition: background .2s ease, color .2s ease;
+
+  border-radius: 10px;
+
+  &:not(.disabled):hover{
+
+    background: $bgcolor !important;
+
+  }
+
+}
+
+.rounded_btn{
+  @include rounded_button($btn_bg_color, $btn_font_color);
+}
+
+.rounded_btn_darken{
+  @include rounded_button(darken($btn_bg_color, 10%), $btn_font_color);
+}
+
+.rounded_btn_blue{
+  @include rounded_button(#3ab1fa, #FFF);
+
+  &:not(.disabled):hover{
+
+    color: #FFFFFF !important;
+
+  }
+
+}
+
+.rounded_btn_green{
+  @include rounded_button(#61b75e, #FFF);
+
+  &:not(.disabled):hover{
+    color: #FFFFFF !important;
+  }
+
+}
+
+.rounded_btn_secondary{
+  @include rounded_button($btn_font_color, $btn_bg_color);
+}
+
+@mixin material_button($bgcolor, $color)
+{
+  background: $bgcolor !important;
+  color: $color !important;
+  padding: .2em .6em;
+  font-size: 20px;
+  -webkit-transition: background .4s ease, color .4s ease;
+  -moz-transition: background .4s ease, color .4s ease;
+  -ms-transition: background .4s ease, color .4s ease;
+  -o-transition: background .4s ease, color .4s ease;
+  transition: background .4s ease, color .4s ease;
+  border: none;
+  cursor: pointer;
+
+  &:not(.disabled):hover{
+
+    background: darken($color, 10%) !important;
+    color: $bgcolor !important;
+
+  }
+}
+
+.pagination_btn{
+  @include material_button(#FFF, #000);
+}
+
+.btn_small{
+
+  font-size: 16px;
+  padding: .4em .8em;
+
+}
+
+//Side BTN
+
+@mixin side_button($bgcolor, $color)
+{
+
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  background: $bgcolor;
+  color: $color;
+  padding: 0 .4em !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: width .2s ease;
+  -moz-transition: width .2s ease;
+  -ms-transition: width .2s ease;
+  -o-transition: width .2s ease;
+  transition: width .2s ease;
+
+
+  .btn_text{
+    line-height: 50px;
+    color: $color;
+    text-align: right;
+  }
+
+
+  &.active{
+    background: #DAA54E;
+    .btn_text{
+      font-weight: bold;
+    }
+  }
+
+  &:hover{
+
+    width: 80px;
+
+
+  }
+
+
+
+}
+
+
+.side_button{
+
+  @include side_button(#131313, #FFF);
+
+}

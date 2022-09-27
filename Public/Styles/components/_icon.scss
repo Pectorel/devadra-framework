@@ -1,0 +1,442 @@
+.icon{
+
+  position: relative;
+  padding-left: 15px;
+
+  &:not(.no-hover)
+  {
+    cursor: pointer;
+    &:hover{
+
+      &:before{
+        opacity: .8;
+      }
+    }
+
+  }
+
+
+  &:before{
+
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -18px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    -ms-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+
+  }
+
+  &.small{
+    &:before{
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  &.popup-icon{
+
+    &:before{
+      left: 15px;
+    }
+
+  }
+
+  &.icon-bigger{
+
+    &:before{
+
+      height: 50px;
+      width: 50px;
+
+    }
+
+  }
+
+  &.icon-right{
+
+    padding-left: 0;
+    padding-right: 15px;
+
+    &:before{
+      left: auto;
+      right: -18px;
+    }
+
+    &.popup-icon{
+
+      &:before{
+        right: 15px;
+      }
+
+    }
+
+
+  }
+
+  &.icon-center{
+
+    &:before{
+
+      left: 50%;
+      right: auto;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+
+  }
+
+  &.icon-member{
+
+    &:before{
+
+      background: url("/Public/Images/site/user.png") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+
+  &.icon-disconnect{
+
+    &:before{
+
+      background: url("/Public/Images/admin/exit_white.png") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+
+  &.icon-pencil
+  {
+
+    &:before{
+
+      background: url("/Public/Images/admin/pencil.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-pencil-white
+  {
+
+    &:before{
+
+      background: url("/Public/Images/admin/pencil_white.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-trash{
+
+    &:before{
+
+      background: url("/Public/Images/admin/trash.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-info{
+
+    &:before{
+
+      background: url("/Public/Images/admin/info_white.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-arrow-down{
+
+    &:before{
+
+      background: url("/Public/Images/admin/arrow_down.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+
+  &.icon-cog{
+
+    &:before{
+
+      background: url("/Public/Images/admin/cog.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-team{
+
+    &:before{
+
+      background: url("/Public/Images/admin/team.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-tree{
+
+    &:before{
+
+      background: url("/Public/Images/admin/tree.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-refresh{
+
+    &:before{
+
+      background: url("/Public/Images/admin/refresh.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-plus{
+
+    &:before{
+
+      background: url("/Public/Images/admin/add.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+  }
+
+  &.icon-external{
+
+    &:before{
+
+      background: url("/Public/Images/admin/external.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+    &.white{
+      &:before{
+
+        background: url("/Public/Images/admin/external_white.svg") no-repeat center center;
+        -webkit-background-size: contain;
+        background-size: contain;
+
+      }
+
+    }
+
+  }
+
+  &.icon-like{
+
+    &:before{
+
+      background: url("/Public/Images/admin/like_empty.svg") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+    &.full, &:hover{
+      &:before{
+
+        background: url("/Public/Images/admin/like_full.svg") no-repeat center center;
+        -webkit-background-size: contain;
+        background-size: contain;
+
+      }
+
+    }
+
+
+  }
+
+  &.icon-thumb-up{
+
+    &:before{
+
+      background: url("/Public/Images/site/thumb_up.png") no-repeat center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+    }
+
+    &.full, &:hover{
+      &:before{
+
+        background: url("/Public/Images/site/thumb_up_full.png") no-repeat center center;
+        -webkit-background-size: contain;
+        background-size: contain;
+
+      }
+
+    }
+
+  }
+
+
+  /* Burger */
+
+  &.icon-burger{
+
+    position: absolute !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(0deg);
+    -moz-transform: translateY(-50%) rotate(0deg);
+    -ms-transform: translateY(-50%) rotate(0deg);
+    -o-transform: translateY(-50%) rotate(0deg);
+    transform: translateY(-50%) rotate(0deg);
+    left: -15px;
+    pointer-events: none;
+
+    &:before{
+
+      width: 0;
+      height: 0;
+      left: 0;
+      right: auto;
+
+    }
+
+  }
+
+  &.icon-right{
+
+
+    &.icon-burger{
+
+      left: auto;
+      right: -15px;
+
+    }
+
+  }
+
+
+
+
+  &#nav-icon3{
+
+    width: 30px;
+    height: 25px;
+    position: relative;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
+
+    span{
+
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: #FFFFFF;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+    }
+
+    span:nth-child(1) {
+      top: 0px;
+    }
+
+    span:nth-child(2), span:nth-child(3) {
+      top: 10px;
+    }
+
+    span:nth-child(4) {
+      top: 20px;
+    }
+
+
+    &.open
+    {
+
+      span:nth-child(1) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+      }
+
+      span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+
+      span:nth-child(4) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+      }
+
+    }
+
+  }
+
+}

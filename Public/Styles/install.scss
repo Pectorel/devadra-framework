@@ -1,0 +1,91 @@
+@import "config";
+$primary_font_color: #FFFFFF;
+@import "reset";
+@import "components/block";
+@import "components/utilities";
+@import "components/btn";
+@import "components/form";
+@import "components/lists";
+@import "components/respframework/init";
+
+
+/* COLORS */
+$bgcol: #318c7f;
+$borcol: #F5F5F5;
+
+/* ============= Style installation Framework ============== */
+
+body{
+  background: $bgcol;
+}
+
+#InstallWrapper{
+
+  text-align: center;
+  height: 100%;
+  position: relative;
+
+
+  #StepContainer{
+
+    height: 90%;
+    width: 100%;
+    @extend .vertical_center;
+    border: 2px solid rgba($borcol, .5);
+    padding: 25px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+  }
+
+}
+
+/* ACL Installation Style */
+
+.acl_line {
+
+  height: 90px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(#E6E6E6, .5);
+  }
+
+
+  >div{
+    height: 100%;
+    position: relative;
+
+    >*{
+        @extend .vertical_center;
+    }
+
+  }
+
+  .role_check_wrapper{
+    .label_top{
+      position: absolute;
+      top: 14px;
+      left: 0;
+      right: 0;
+    }
+
+    .fix_label_top{
+
+      -webkit-transform: translate(43%, -50%);
+      -moz-transform: translate(43%, -50%);
+      -ms-transform: translate(43%, -50%);
+      -o-transform: translate(43%, -50%);
+      transform: translate(43%, -50%);
+
+    }
+  }
+
+}
+
+/* Default Styling */
+
+h1, h2, h3, p{
+  @extend .mb_20;
+}

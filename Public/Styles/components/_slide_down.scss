@@ -1,0 +1,57 @@
+[data-slide-down]{
+
+  &.default{
+
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background: url("/Public/Images/site/arrow_downvote.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+    -webkit-transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    -ms-transition: transform .2s ease-in-out;
+    -o-transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transform-origin: center 5px;
+
+    &.active{
+
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+
+    }
+
+  }
+
+}
+
+.slide_down_container{
+
+  overflow: hidden;
+  -webkit-transition: height .4s ease;
+  -moz-transition: height .4s ease;
+  -ms-transition: height .4s ease;
+  -o-transition: height .4s ease;
+  transition: height .4s ease;
+
+  &.close{
+
+    height: 0;
+
+  }
+
+}
+

@@ -1,0 +1,31 @@
+/* Styling Datetime Picker */
+.xdsoft_datetimepicker{
+
+  *{
+    color: $primary_color !important;
+  }
+
+  .xdsoft_current{
+
+    background: lighten($primary_color, 35%) !important;
+  }
+
+  .xdsoft_calendar td:hover, .xdsoft_timepicker .xdsoft_time_box>div>div:hover, .xdsoft_label>.xdsoft_select>div>.xdsoft_option:hover{
+
+    &:hover{
+
+      background: darken($primary_color, 5%) !important;
+      color: #FFFFFF !important;
+
+      *{
+
+        color: #FFFFFF !important;
+      }
+
+
+    }
+
+  }
+
+
+}

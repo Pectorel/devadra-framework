@@ -1,0 +1,53 @@
+/* --- Aside NAV --- */
+
+#AdminAside{
+
+  width: 100px;
+  height: calc(100% - 106px);
+
+  &:not(.active)
+  {
+    overflow: hidden;
+  }
+
+  &.active{
+    overflow-y: auto;
+  }
+
+
+  .burger{
+
+    height: 50px;
+
+    ul{
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      li{
+        width: 100%;
+
+        #AdminMenuLink{
+
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          width: 100%;
+          display: block;
+          padding-left: 0.5em;
+
+          .icon-burger{
+
+            right: 5px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

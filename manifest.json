@@ -1,0 +1,13 @@
+{
+  "framework": "DevadraFramework",
+  "versioning": {
+    "css": {
+      "admin": 3,
+      "public": 4
+    },
+    "js": {
+      "admin": 2,
+      "public": 2
+    }
+  }
+}

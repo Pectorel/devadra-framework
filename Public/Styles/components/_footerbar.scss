@@ -1,0 +1,21 @@
+.footerbar{
+
+  background: darken($primary_color, 10%);
+  padding: 1em 2em;
+  font-size: 14px;
+  position: relative;
+
+  .footerbar_text{
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+  }
+
+}

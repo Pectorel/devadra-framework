@@ -1,0 +1,60 @@
+// Text
+.txt_center{
+  text-align: center;
+}
+
+.txt_right{
+  text-align: right;
+}
+
+.txt_left{
+  text-align: left;
+}
+
+.txt_justify{
+  text-align: justify;
+}
+
+.txt_upper{
+  text-transform: uppercase;
+}
+
+.txt_lower{
+  text-transform: lowercase;
+}
+
+.txt_cap{
+  text-transform: capitalize;
+}
+
+.small_info{
+  font-size: 14px;
+}
+
+.mini_message{
+  font-size: .7rem;
+}
+
+
+// Title
+.custom_h2{
+  font-size: 40px;
+}
+
+.custom_h3{
+  font-size: 30px;
+}
+
+
+// colors
+.ok{
+  color: #4ed8a5 !important;
+}
+
+.error{
+  color: #b52020 !important;
+}
+
+.txt_main_col{
+  color: $primary_font_color;
+}

@@ -1,0 +1,108 @@
+.popup{
+
+  position: fixed;
+  top: -100%;
+  width: 30%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 24;
+  margin: auto;
+  background: $primary_color;
+  max-height: 85vh;
+
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+
+
+
+
+  .popup_header{
+
+    background: darken($primary_color, 5%);
+    padding: .6em 0;
+    position: relative;
+    font-size: 32px;
+
+  }
+
+  .popup_close{
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    background: url("/Public/Images/site/close.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+
+  }
+
+
+  .popup_content{
+
+    //background: $primary_color;
+    padding: 2em 4em;
+    max-height: calc(85vh - 93px);
+    overflow: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+  }
+
+
+  &.active{
+
+    &.slide_top{
+
+      opacity: 1;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+
+    }
+
+  }
+
+}
+
+#PopupLayer {
+
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .4s ease, z-index 0s linear .4s;
+  -moz-transition: opacity .4s ease, z-index 0s linear .4s;
+  -ms-transition: opacity .4s ease, z-index 0s linear .4s;
+  -o-transition: opacity .4s ease, z-index 0s linear .4s;
+  transition: opacity .4s ease, z-index 0s linear .4s;
+  background: rgba(#000000, .6);
+
+  &.active {
+
+    z-index: 22;
+    opacity: 1;
+    -webkit-transition: opacity .4s ease, z-index 0s linear;
+    -moz-transition: opacity .4s ease, z-index 0s linear;
+    -ms-transition: opacity .4s ease, z-index 0s linear;
+    -o-transition: opacity .4s ease, z-index 0s linear;
+    transition: opacity .4s ease, z-index 0s linear;
+
+  }
+
+}
+

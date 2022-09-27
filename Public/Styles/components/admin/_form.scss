@@ -1,0 +1,189 @@
+/* --- FORM ---*/
+
+
+.admin_form{
+
+  padding: 2em 0;
+
+  .admin_section{
+
+    min-height: 300px;
+    max-height: 300px;
+    overflow: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 4px solid darken($primary_color, 10%);
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 30px;
+
+
+    header{
+
+      margin-bottom: 40px;
+
+      .admin_section_title{
+        padding: 1em 1.4em;
+      }
+
+      .admin_section_button{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+    }
+
+    .admin_section_content{
+
+      padding: 0 2em;
+
+      [class$="_line"]{
+
+        padding: 1em .5em;
+        background: darken($primary_color, 10%);
+        opacity: 1;
+        margin-bottom: 10px;
+        -webkit-transition: background .2s ease;
+        -moz-transition: background .2s ease;
+        -ms-transition: background .2s ease;
+        -o-transition: background .2s ease;
+        transition: background .2s ease;
+
+
+        &:hover{
+
+          background: darken($primary_color, 15%);
+
+        }
+
+      }
+
+    }
+
+
+  }
+
+}
+
+
+// Images Container
+
+#ImagesContainer{
+
+  .image_container{
+
+    height: 150px;
+    width: 150px;
+
+    img{
+      height: 100%;
+    }
+
+
+
+  }
+
+  .image_input_container{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:before{
+
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      opacity: .3;
+      background: url("/Public/Images/admin/add.svg") no-repeat center center;
+      -webkit-background-size: 50%;
+      background-size: 50%;
+
+    }
+
+
+
+    border: 2px dashed darken($primary_color, 10%);
+
+
+    .add_phrase{
+      font-size: 14px;
+      position: absolute;
+      width: 100%;
+      bottom: 5px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+
+    .filename{
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
+    }
+
+    .custom_file_button{
+
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+      font-size: 0;
+
+
+    }
+
+
+
+  }
+}
+
+
+// Care Depent Block
+.care_depent_block{
+
+  border: 1px solid rgba($cd_border_color, .6);
+  padding: 1.6em .5em;
+
+  [id^=AddAjaxButton] {
+    margin-top: 20px;
+  }
+
+  [id$="FormsContainer"] {
+
+    .wrapper{
+      width: 100%;
+      text-align: left;
+    }
+
+    .bloc60{
+
+      width: 90%;
+
+    }
+
+  }
+
+}

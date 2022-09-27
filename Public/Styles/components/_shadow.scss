@@ -1,0 +1,20 @@
+@mixin material_shadow($xoffset:0, $yoffset:1px, $blur: 6px, $color:#000, $opacity:.5, $hover:false)
+{
+  box-shadow: $xoffset $yoffset $blur rgba($color, $opacity);
+
+  @if($hover)
+  {
+
+    -webkit-transition: box-shadow .2s ease-out;
+    -moz-transition: box-shadow .2s ease-out;
+    -ms-transition: box-shadow .2s ease-out;
+    -o-transition: box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out;
+
+    &:hover:not(.disabled), &:focus:not(.disabled){
+      box-shadow: $xoffset #{$yoffset - 2} #{$blur * 1.5} rgba($color, $opacity), $xoffset #{$yoffset + 5} #{$blur * 2.2} 1px rgba($color, $opacity+0.2) ;
+    }
+
+  }
+
+}

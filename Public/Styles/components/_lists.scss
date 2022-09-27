@@ -1,0 +1,42 @@
+// List
+.square_list{
+
+  li{
+
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+
+    &:before{
+
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      background: $primary_font_color;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: -16px;
+
+    }
+
+  }
+
+}
+
+
+.vertical_list{
+
+  text-align: left;
+  list-style: disc;
+
+  li{
+    display: list-item;
+    margin: 0 0 10px 0 !important;
+  }
+
+}

@@ -1,0 +1,25 @@
+/* --- UTILITIES --- */
+
+.admin_title{
+  margin-bottom: 40px;
+}
+
+.warning{
+
+  margin-bottom: 70px;
+  font-size: 24px;
+  *{
+
+    color: $warning_color;
+  }
+
+}
+
+
+.info_message{
+
+  display: block;
+  text-align: center;
+  font-size: 20px;
+
+}

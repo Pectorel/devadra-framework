@@ -1,0 +1,52 @@
+/* Wrapper and Blocks */
+
+// WRAPPER
+.wrapper{
+
+  width: map_get($breakpoints, desktop);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+
+// BLOCKS
+.bloc48 { width: 48%; }
+.bloc46 { width: 46%; }
+.bloc33 { width: 33%; }
+.bloc16 { width: 16.66%; }
+
+$i:0;
+
+@while($i <= 100){
+
+  .bloc#{$i}{
+    width: percentage($i/100);
+  }
+
+  $i: $i +5;
+
+}
+
+// Float
+.pull_left{
+  float: left;
+}
+
+.pull_right{
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
+
+// Default responsive
+@media screen and (max-width: map_get($breakpoints, desktop)) {
+  .wrapper {
+    width: 96%;
+
+  }
+}
